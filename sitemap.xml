@@ -101,13 +101,6 @@
 
   
   <url>
-    <loc>https://fjqz177.top/tags/Markdown/</loc>
-    <lastmod>2023-06-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://fjqz177.top/tags/Python/</loc>
     <lastmod>2023-06-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -121,17 +114,24 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://fjqz177.top/tags/Markdown/</loc>
+    <lastmod>2023-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
-    <loc>https://fjqz177.top/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://fjqz177.top/categories/%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2023-06-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://fjqz177.top/categories/%E7%BC%96%E7%A8%8B/</loc>
+    <loc>https://fjqz177.top/categories/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2023-06-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
