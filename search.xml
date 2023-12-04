@@ -13,7 +13,7 @@
 <h1 id="准备工作">0.准备工作</h1>
 <p>首先需要新建一个和 Github 用户名相同的仓库 <img src="https://www.helloimg.com/images/2023/01/17/oRGdFm.jpg">
 记得勾选<code>Add a README file</code>这个选项
-接下来在自己电脑上创建一个<code>.md</code>后缀的文件，名称随意，并用支持<code>Markdown</code>语法的编辑器编辑，当然嫌麻烦可以用<a href="https://md.mzr.me/">https://md.mzr.me</a>或者其他你喜欢的在线编辑器编辑</p>
+接下来在自己电脑上创建一个<code>.md</code>后缀的文件，名称随意，并用支持<code>Markdown</code>语法的编辑器编辑，当然嫌麻烦可以用<a href="https://arya.pages.dev/">https://arya.pages.dev/</a>或者其他你喜欢的在线编辑器编辑</p>
 <h1 id="带有打字特效的文字">1.带有打字特效的文字</h1>
 <p>打字特效生成网站：<a href="https://readme-typing-svg.herokuapp.com/demo/">Readme Typing SVG -
 Demo Site</a></p>
