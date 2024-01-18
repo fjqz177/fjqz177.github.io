@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"fjqz177.top","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="在你安装完fedora以后，好像缺了点什么，这篇文章可以帮到你😁">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安装完fedora 39后要做的事">
+<meta property="og:url" content="https://fjqz177.top/posts/9/index.html">
+<meta property="og:site_name" content="fjqz177的Hexo博客">
+<meta property="og:description" content="在你安装完fedora以后，好像缺了点什么，这篇文章可以帮到你😁">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://vip.helloimg.com/images/2024/01/18/oIIheQ.png">
+<meta property="article:published_time" content="2024-01-18T04:46:00.000Z">
+<meta property="article:modified_time" content="2024-01-18T15:07:02.361Z">
+<meta property="article:author" content="fjqz177">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="fedora">
+<meta property="article:tag" content="美化">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://vip.helloimg.com/images/2024/01/18/oIIheQ.png">
+
+<link rel="canonical" href="https://fjqz177.top/posts/9/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>安装完fedora 39后要做的事 | fjqz177的Hexo博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+    <a target="_blank" rel="noopener" href="https://github.com/fjqz177" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#000000; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">fjqz177的Hexo博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://fjqz177.top/posts/9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my_avatar.jpg">
+      <meta itemprop="name" content="fjqz177">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          安装完fedora 39后要做的事
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-01-18 12:46:00 / 修改时间：23:07:02" itemprop="dateCreated datePublished" datetime="2024-01-18T12:46:00+08:00">2024-01-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/9/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/9/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="在你安装完fedora以后好像缺了点什么这篇文章可以帮到你">在你安装完fedora以后，好像缺了点什么，这篇文章可以帮到你😁</h1>
+<span id="more"></span>
+<h1 id="第一步当然是换源啦">1. 第一步当然是换源啦</h1>
+<p>在终端中输入命令 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo sed -e <span class="string">'s|^metalink=|#metalink=|g'</span> \</span><br><span class="line">         -e <span class="string">'s|^#baseurl=http://download.example/pub/fedora/linux|baseurl=https://mirrors.ustc.edu.cn/fedora|g'</span> \</span><br><span class="line">         -i.bak \</span><br><span class="line">         /etc/yum.repos.d/fedora.repo \</span><br><span class="line">         /etc/yum.repos.d/fedora-updates.repo</span><br></pre></td></tr></table></figure></p>
+<p>顺便把 <code>RPM Fusion</code> 的源也换好 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dnf install https://mirrors.ustc.edu.cn/rpmfusion/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.ustc.edu.cn/rpmfusion/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm</span><br></pre></td></tr></table></figure></p>
+<h2 id="添加-flathub-存储库">添加 <code>Flathub</code> 存储库</h2>
+<p>Fedora 默认情况下启用了 Flatpak。 但是，它是过滤后的 Flatpak 。</p>
+<p>因此，要访问各种可用的 Flatpak
+应用程序，你可以在终端中使用以下命令添加 Flathub 存储库：
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flatpak remote-add --if-not-exists flathub https://mirror.sjtu.edu.cn/flathub/flathub.flatpakrepo</span><br><span class="line">flatpak remote-modify flathub --url=https://mirror.sjtu.edu.cn/flathub</span><br></pre></td></tr></table></figure></p>
+<h1 id="编辑-dnf-包管理器配置">2. 编辑 <code>dnf</code>
+包管理器配置</h1>
+<p>Fedora
+可以通过多种方法增强下载包的速度。比如选择最快的镜像，可以提高包下载速度。此外，如果你的互联网连接速度足够快，则可以更改并行下载的数量以获得更快的下载。</p>
+<p>要做这两件事，只需编辑位于 <code>/etc/dnf/dnf.conf</code> 的
+<code>dnf</code> 配置文件。</p>
+<p>将以下行附加到 <code>/etc/dnf/dnf.conf</code> 文件中，保存并退出：
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># fastestmirror=true</span></span><br><span class="line">deltarpm=<span class="literal">true</span></span><br><span class="line">max_parellel_downloads=32</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><code>fastestmirror</code> 为选择最快软件源，因为我们手动修改了仓库里面的信息则不需要启动这个。<br>
+</li>
+<li><code>deltarpm</code> 相当于增量下载，把软件增加的部分下载下来，和原软件包合成新软件包，类似于现在的
+Android 软件更新。<br>
+</li>
+<li><code>max_parellel_downloads</code> 设置最大并行下载数量。</li>
+</ul>
+<h1 id="更新系统">3. 更新系统</h1>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dnf update</span><br></pre></td></tr></table></figure>
+<p>更新系统之后多半会安装新的内核，以及会出现一些无用的依赖。重新启动系统到新的内核，确保内核运转没有问题了，就可以删除旧内核以及无用的依赖了。</p>
+<p>使用以下命令就可以自动删除无用的依赖： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dnf autoremove</span><br></pre></td></tr></table></figure> Fedora
+内核更新快，但是每次更新内核，旧的内核不会自动删除，占用硬盘空间。以前的教程删除旧内核都是先搜索，再移除要删除的版本，输入版本号也非常麻烦。使用以下命令即可一条命令删除旧内核：
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dnf remove --oldinstallonly</span><br></pre></td></tr></table></figure></p>
+<h1 id="终端美化">4. 终端美化</h1>
+<h2 id="首先安装zsh">首先安装<code>zsh</code></h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dnf install zsh git <span class="comment"># 这里安装git是为了后面的zsh美化做准备</span></span><br></pre></td></tr></table></figure>
+<p>然后打开<code>zsh</code> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zsh</span><br></pre></td></tr></table></figure></p>
+<p>看到这个提示，按 <code>0</code> 跳过 <a target="_blank" rel="noopener" href="https://www.helloimg.com/image/oIIheQ"><img src="https://vip.helloimg.com/images/2024/01/18/oIIheQ.png" alt="oIIheQ.png"></a></p>
+<h2 id="然后我们把-oh-my-zsh-插件下载下来">然后我们把
+<code>oh-my-zsh</code> 插件下载下来</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://gitee.com/mirrors/oh-my-zsh.git ~/.oh-my-zsh</span><br></pre></td></tr></table></figure>
+<p>使用 <code>oh-my-zsh</code> 的模板替换 <code>zsh</code>
+自带的配置文件 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cp</span> ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc</span><br></pre></td></tr></table></figure></p>
+<p>让新的配置文件生效 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure></p>
+<h2 id="接下来安装-powerlevel10k-这个主题">接下来安装
+<code>powerlevel10k</code> 这个主题</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth=1 https://gh.api.99988866.xyz/https://github.com/romkatv/powerlevel10k.git <span class="variable">${ZSH_CUSTOM:-<span class="variable">$HOME</span>/.oh-my-zsh/custom}</span>/themes/powerlevel10k</span><br></pre></td></tr></table></figure>
+<p>然后我们编辑配置文件使主题生效 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano ~/.zshrc</span><br></pre></td></tr></table></figure></p>
+<p>找到 <code>ZSH_THEME=……</code> 这一行，将其改为
+<code>ZSH_THEME="powerlevel10k/powerlevel10k"</code></p>
+<p>然后更改默认终端并重启 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo chsh -s /bin/zsh</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure></p>
+<p>接着打开终端输入 <code>p10k configure</code>
+按照提示配置你喜欢的样式</p>
+<h2 id="安装一些常用的插件">安装一些常用的插件</h2>
+<p>打开 <code>~/.zshrc</code> 文件找到 <code>plugins=( git )</code>
+，这里是我们已经启用的插件</p>
+<p>如果想要启用某个插件请直接修改</p>
+<blockquote>
+<p>plugins = (插件A 插件B 插件C)</p>
+</blockquote>
+<h3 id="git">git</h3>
+<p>无需配置，默认已开启</p>
+<p>使我们可以方便的使用git命令的缩写</p>
+<p>常见缩写：</p>
+<blockquote>
+<p>gp='git push'<br>
+gm='git merge'<br>
+gl='git pull'</p>
+</blockquote>
+<p>查看所有git命令缩写 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.oh-my-zsh/plugins/git/git.plugin.zsh</span><br></pre></td></tr></table></figure></p>
+<h3 id="sudo">sudo</h3>
+<p>偶尔输入某个命令，提示没有权限，需要加sudo，这个时候按两下ESC，就会在命令行头部加上sudo</p>
+<h3 id="extract">extract</h3>
+<p>功能强大的解压插件，所有类型的文件解压一个命令<code>x</code>全搞定，再也不需要去记<code>tar</code>后面到底是哪几个参数了。</p>
+<h3 id="更多自带插件可以去-oh-my-zsh-官网查看">更多自带插件可以去
+<code>oh-my-zsh</code> 官网查看</h3>
+<p>官方插件一览：<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins-Overview">https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins-Overview</a></p>
+<h2 id="接下来是需要自己手动安装的一些插件">接下来是需要自己手动安装的一些插件</h2>
+<h3 id="zsh-autosuggestions">zsh-autosuggestions</h3>
+<p>非常好用的一个插件，会记录你之前输入过的所有命令，并且自动匹配你可能想要输入命令，然后按→补全</p>
+<p>安装： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth=1 https://gh.api.99988866.xyz/https://github.com/zsh-users/zsh-autosuggestions <span class="variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/zsh-autosuggestions</span><br></pre></td></tr></table></figure></p>
+<h3 id="zsh-syntax-highlighting">zsh-syntax-highlighting</h3>
+<p>命令太多，有时候记不住，等输入完了才知道命令输错了，这个插件直接在输入过程中就会提示你，当前命令是否正确，错误红色，正确绿色</p>
+<p>安装： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth=1 https://gh.api.99988866.xyz/https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/zsh-syntax-highlighting</span><br></pre></td></tr></table></figure></p>
+<h3 id="zsh-completions">zsh-completions</h3>
+<p>命令补全插件，输入命令按Tab键后会提示可以使用的命令和说明。</p>
+<p>安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载插件</span></span><br><span class="line">git <span class="built_in">clone</span> --depth=1 https://gh.api.99988866.xyz/https://github.com/zsh-users/zsh-completions.git <span class="variable">${ZSH_CUSTOM:-<span class="variable">${ZSH:-~/.oh-my-zsh}</span>/custom}</span>/plugins/zsh-completions</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开~/.zshrc</span></span><br><span class="line"><span class="comment"># 在source "$ZSH/oh-my-zsh.sh"这一行之前添加下面这行代码</span></span><br><span class="line">fpath+=<span class="variable">${ZSH_CUSTOM:-<span class="variable">${ZSH:-~/.oh-my-zsh}</span>/custom}</span>/plugins/zsh-completions/src</span><br><span class="line"></span><br><span class="line"><span class="comment">#重启终端</span></span><br><span class="line">zsh</span><br></pre></td></tr></table></figure>
+<h2 id="其他">其他</h2>
+<p>遇事不决，多敲 Tab。</p>
+<h2 id="记得在-.zshrc-中把插件启用"><strong>记得在 <code>~/.zshrc</code>
+中把插件启用</strong></h2>
+<h1 id="一些必装的软件">5. 一些必装的软件</h1>
+<h2 id="bat">bat</h2>
+<p><code>bat</code> 替代 <code>cat</code>
+指令，具有语法高亮、行号显示、文件目录显示清晰等强大功能。</p>
+<p>官网：<a target="_blank" rel="noopener" href="https://github.com/sharkdp/bat">https://github.com/sharkdp/bat</a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dnf install bat</span><br></pre></td></tr></table></figure></p>
+<h3 id="neofetch">neofetch</h3>
+<p>显示系统信息和logo。（就是看起来美观酷炫，实际上没啥用。）
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dnf install neofetch</span><br></pre></td></tr></table></figure></p>
+<h1 id="gnome桌面优化">6. Gnome桌面优化</h1>
+<p>要调整 GNOME 的外观和感觉，你需要安装
+GNOME 优化Tweaks 和扩展管理器应用程序。 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dnf install gnome-tweaks gnome-extensions-app</span><br></pre></td></tr></table></figure> 然后你就可以在 <a target="_blank" rel="noopener" href="https://extensions.gnome.org/">GNOME Shell
+扩展页面</a> 挑选扩展了。(记得在浏览器中安装gnome-extensions的浏览器插件哦)</p>
+<h2 id="推荐一些自用的扩展">推荐一些自用的扩展</h2>
+<h3 id="dash-to-dock"><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/307/dash-to-dock/">Dash to
+Dock</a></h3>
+<p>经典插件，用了都说好</p>
+<h3 id="coverflow-alt-tab"><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/97/coverflow-alt-tab/">Coverflow
+Alt-Tab</a></h3>
+<p>能修改Alt + Tab的窗口切换效果，同样支持一些自定义设置。</p>
+<h1 id="开发环境配置">7. 开发环境配置</h1>
+<h2 id="pip换源">pip换源</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip</span><br><span class="line">pip config <span class="built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
+<h2 id="rust启动-rust安装及换源"><del>Rust,启动！</del>
+Rust安装及换源</h2>
+<h3 id="步骤一设置-rustup-镜像-修改配置-.zshrc-or-.bashrc">步骤一：设置
+Rustup 镜像， 修改配置 ~/.zshrc or ~/.bashrc</h3>
+<p>将下列代码加入到 <code>~/.zshrc</code> or <code>~/.bashrc</code>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> RUSTUP_DIST_SERVER=<span class="string">"https://rsproxy.cn"</span></span><br><span class="line"><span class="built_in">export</span> RUSTUP_UPDATE_ROOT=<span class="string">"https://rsproxy.cn/rustup"</span></span><br></pre></td></tr></table></figure> 然后重启终端</p>
+<h3 id="步骤二安装-rust请先完成步骤一的环境变量导入并-source-rc-文件或重启终端生效">步骤二：安装
+Rust（请先完成步骤一的环境变量导入并 source rc 文件或重启终端生效）</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --proto <span class="string">'=https'</span> --tlsv1.2 -sSf https://rsproxy.cn/rustup-init.sh | sh</span><br></pre></td></tr></table></figure>
+<h3 id="步骤三设置-crates.io-镜像-修改配置-.cargoconfig">步骤三：设置
+<code>crates.io</code> 镜像， 修改配置 <code>~/.cargo/config</code></h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[source.crates-io]</span><br><span class="line">replace-with = <span class="string">'rsproxy-sparse'</span></span><br><span class="line">[source.rsproxy]</span><br><span class="line">registry = <span class="string">"https://rsproxy.cn/crates.io-index"</span></span><br><span class="line">[source.rsproxy-sparse]</span><br><span class="line">registry = <span class="string">"sparse+https://rsproxy.cn/index/"</span></span><br><span class="line">[registries.rsproxy]</span><br><span class="line">index = <span class="string">"https://rsproxy.cn/crates.io-index"</span></span><br><span class="line">[net]</span><br><span class="line">git-fetch-with-cli = <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h1 id="待未完续"><strong>待未完续</strong>（</h1>
+<h1 id="我想鸽了-不是"><del>我想鸽了</del> （不是）</h1>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Linux/" rel="tag"><i class="fa fa-tag"></i></a>
+              <a href="/tags/fedora/" rel="tag"><i class="fa fa-tag"></i></a>
+              <a href="/tags/%E7%BE%8E%E5%8C%96/" rel="tag"><i class="fa fa-tag"></i></a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/8/" rel="prev" title="用Rust实现RSA加密解密">
+      <i class="fa fa-chevron-left"></i> 用Rust实现RSA加密解密
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9C%A8%E4%BD%A0%E5%AE%89%E8%A3%85%E5%AE%8Cfedora%E4%BB%A5%E5%90%8E%E5%A5%BD%E5%83%8F%E7%BC%BA%E4%BA%86%E7%82%B9%E4%BB%80%E4%B9%88%E8%BF%99%E7%AF%87%E6%96%87%E7%AB%A0%E5%8F%AF%E4%BB%A5%E5%B8%AE%E5%88%B0%E4%BD%A0"><span class="nav-number">1.</span> <span class="nav-text">在你安装完fedora以后，好像缺了点什么，这篇文章可以帮到你😁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%E5%BD%93%E7%84%B6%E6%98%AF%E6%8D%A2%E6%BA%90%E5%95%A6"><span class="nav-number">2.</span> <span class="nav-text">1. 第一步当然是换源啦</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0-flathub-%E5%AD%98%E5%82%A8%E5%BA%93"><span class="nav-number">2.1.</span> <span class="nav-text">添加 Flathub 存储库</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BC%96%E8%BE%91-dnf-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%E9%85%8D%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">2. 编辑 dnf
+包管理器配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0%E7%B3%BB%E7%BB%9F"><span class="nav-number">4.</span> <span class="nav-text">3. 更新系统</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%88%E7%AB%AF%E7%BE%8E%E5%8C%96"><span class="nav-number">5.</span> <span class="nav-text">4. 终端美化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A6%96%E5%85%88%E5%AE%89%E8%A3%85zsh"><span class="nav-number">5.1.</span> <span class="nav-text">首先安装zsh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%84%B6%E5%90%8E%E6%88%91%E4%BB%AC%E6%8A%8A-oh-my-zsh-%E6%8F%92%E4%BB%B6%E4%B8%8B%E8%BD%BD%E4%B8%8B%E6%9D%A5"><span class="nav-number">5.2.</span> <span class="nav-text">然后我们把
+oh-my-zsh 插件下载下来</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E4%B8%8B%E6%9D%A5%E5%AE%89%E8%A3%85-powerlevel10k-%E8%BF%99%E4%B8%AA%E4%B8%BB%E9%A2%98"><span class="nav-number">5.3.</span> <span class="nav-text">接下来安装
+powerlevel10k 这个主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E7%9A%84%E6%8F%92%E4%BB%B6"><span class="nav-number">5.4.</span> <span class="nav-text">安装一些常用的插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git"><span class="nav-number">5.4.1.</span> <span class="nav-text">git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sudo"><span class="nav-number">5.4.2.</span> <span class="nav-text">sudo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#extract"><span class="nav-number">5.4.3.</span> <span class="nav-text">extract</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E5%A4%9A%E8%87%AA%E5%B8%A6%E6%8F%92%E4%BB%B6%E5%8F%AF%E4%BB%A5%E5%8E%BB-oh-my-zsh-%E5%AE%98%E7%BD%91%E6%9F%A5%E7%9C%8B"><span class="nav-number">5.4.4.</span> <span class="nav-text">更多自带插件可以去
+oh-my-zsh 官网查看</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E4%B8%8B%E6%9D%A5%E6%98%AF%E9%9C%80%E8%A6%81%E8%87%AA%E5%B7%B1%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85%E7%9A%84%E4%B8%80%E4%BA%9B%E6%8F%92%E4%BB%B6"><span class="nav-number">5.5.</span> <span class="nav-text">接下来是需要自己手动安装的一些插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#zsh-autosuggestions"><span class="nav-number">5.5.1.</span> <span class="nav-text">zsh-autosuggestions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#zsh-syntax-highlighting"><span class="nav-number">5.5.2.</span> <span class="nav-text">zsh-syntax-highlighting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#zsh-completions"><span class="nav-number">5.5.3.</span> <span class="nav-text">zsh-completions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">5.6.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%B0%E5%BE%97%E5%9C%A8-.zshrc-%E4%B8%AD%E6%8A%8A%E6%8F%92%E4%BB%B6%E5%90%AF%E7%94%A8"><span class="nav-number">5.7.</span> <span class="nav-text">记得在 ~&#x2F;.zshrc
+中把插件启用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E5%BF%85%E8%A3%85%E7%9A%84%E8%BD%AF%E4%BB%B6"><span class="nav-number">6.</span> <span class="nav-text">5. 一些必装的软件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#bat"><span class="nav-number">6.1.</span> <span class="nav-text">bat</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#neofetch"><span class="nav-number">6.1.1.</span> <span class="nav-text">neofetch</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gnome%E6%A1%8C%E9%9D%A2%E4%BC%98%E5%8C%96"><span class="nav-number">7.</span> <span class="nav-text">6. Gnome桌面优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E4%B8%80%E4%BA%9B%E8%87%AA%E7%94%A8%E7%9A%84%E6%89%A9%E5%B1%95"><span class="nav-number">7.1.</span> <span class="nav-text">推荐一些自用的扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#dash-to-dock"><span class="nav-number">7.1.1.</span> <span class="nav-text">Dash to
+Dock</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#coverflow-alt-tab"><span class="nav-number">7.1.2.</span> <span class="nav-text">Coverflow
+Alt-Tab</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-number">8.</span> <span class="nav-text">7. 开发环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#pip%E6%8D%A2%E6%BA%90"><span class="nav-number">8.1.</span> <span class="nav-text">pip换源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rust%E5%90%AF%E5%8A%A8-rust%E5%AE%89%E8%A3%85%E5%8F%8A%E6%8D%A2%E6%BA%90"><span class="nav-number">8.2.</span> <span class="nav-text">Rust,启动！
+Rust安装及换源</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%B8%80%E8%AE%BE%E7%BD%AE-rustup-%E9%95%9C%E5%83%8F-%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE-.zshrc-or-.bashrc"><span class="nav-number">8.2.1.</span> <span class="nav-text">步骤一：设置
+Rustup 镜像， 修改配置 ~&#x2F;.zshrc or ~&#x2F;.bashrc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%BA%8C%E5%AE%89%E8%A3%85-rust%E8%AF%B7%E5%85%88%E5%AE%8C%E6%88%90%E6%AD%A5%E9%AA%A4%E4%B8%80%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%AF%BC%E5%85%A5%E5%B9%B6-source-rc-%E6%96%87%E4%BB%B6%E6%88%96%E9%87%8D%E5%90%AF%E7%BB%88%E7%AB%AF%E7%94%9F%E6%95%88"><span class="nav-number">8.2.2.</span> <span class="nav-text">步骤二：安装
+Rust（请先完成步骤一的环境变量导入并 source rc 文件或重启终端生效）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%B8%89%E8%AE%BE%E7%BD%AE-crates.io-%E9%95%9C%E5%83%8F-%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE-.cargoconfig"><span class="nav-number">8.2.3.</span> <span class="nav-text">步骤三：设置
+crates.io 镜像， 修改配置 ~&#x2F;.cargo&#x2F;config</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BE%85%E6%9C%AA%E5%AE%8C%E7%BB%AD"><span class="nav-number">9.</span> <span class="nav-text">待未完续（</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%88%91%E6%83%B3%E9%B8%BD%E4%BA%86-%E4%B8%8D%E6%98%AF"><span class="nav-number">10.</span> <span class="nav-text">我想鸽了 （不是）</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="fjqz177"
+      src="/images/my_avatar.jpg">
+  <p class="site-author-name" itemprop="name">fjqz177</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/fjqz177" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;fjqz177" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/fjqz177@139.com" title="E-Mail → fjqz177@139.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/u/5862441076" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;5862441076" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+<!-- recent posts -->
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2022 – 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">fjqz177</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">33k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">30 分钟</span>
+</div><div>
+  <span id="sitetime"></span>
+  <script language=javascript>
+      function siteTime(){
+          window.setTimeout("siteTime()", 1000);
+          var seconds = 1000;
+          var minutes = seconds * 60;
+          var hours = minutes * 60;
+          var days = hours * 24;
+          var years = days * 365;
+          var today = new Date();
+          var todayYear = today.getFullYear();
+          var todayMonth = today.getMonth()+1;
+          var todayDate = today.getDate();
+          var todayHour = today.getHours();
+          var todayMinute = today.getMinutes();
+          var todaySecond = today.getSeconds();
+          /* 
+          Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+          year - 作为date对象的年份，为4位年份值
+          month - 0-11之间的整数，做为date对象的月份
+          day - 1-31之间的整数，做为date对象的天数
+          hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+          minutes - 0-59之间的整数，做为date对象的分钟数
+          seconds - 0-59之间的整数，做为date对象的秒数
+          microseconds - 0-999之间的整数，做为date对象的毫秒数
+      */
+          var t1 = Date.UTC(2021,12,23,11,40,00); //北京时间2018-2-13 00:00:00
+          var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+          var diff = t2-t1;
+      var diffYears = Math.floor(diff/years);
+      var diffDays = Math.floor((diff/days)-diffYears*365);
+      var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+      var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+      var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+      document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+    }
+      siteTime();
+  </script>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script color='0,0,0' opacity='0.8' zIndex='-1' count='100' src="/lib/canvas-nest/canvas-nest-nomobile.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'default',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'sOHn0nk7MNCH5aJPMaRsap68-gzGzoHsz',
+      appKey     : '8cwjoCV2IhxqqlVyLdZ96lqe',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
