@@ -31,7 +31,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://vip.helloimg.com/images/2024/01/18/oIIheQ.png">
 <meta property="article:published_time" content="2024-01-18T04:46:00.000Z">
-<meta property="article:modified_time" content="2024-01-19T03:48:17.447Z">
+<meta property="article:modified_time" content="2024-01-19T04:13:39.601Z">
 <meta property="article:author" content="fjqz177">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="fedora">
@@ -338,7 +338,7 @@ mjx-container[display="true"] + br {
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-01-19 11:48:17" itemprop="dateModified" datetime="2024-01-19T11:48:17+08:00">2024-01-19</time>
+                <time title="修改时间：2024-01-19 12:13:39" itemprop="dateModified" datetime="2024-01-19T12:13:39+08:00">2024-01-19</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -377,7 +377,7 @@ mjx-container[display="true"] + br {
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>4.6k</span>
+              <span>4.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -509,7 +509,7 @@ Alt-Tab</a></h3>
 <p>能修改Alt + Tab的窗口切换效果，同样支持一些自定义设置。</p>
 <h1 id="开发环境配置">7. 开发环境配置</h1>
 <h2 id="pip换源">pip换源</h2>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip</span><br><span class="line">pip config <span class="built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo dnf install python3-pip</span><br><span class="line">python -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip</span><br><span class="line">pip config <span class="built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
 <h2 id="rust启动-rust安装及换源"><del>Rust,启动！</del>
 Rust安装及换源</h2>
 <h3 id="步骤一设置-rustup-镜像-修改配置-.zshrc-or-.bashrc">步骤一：设置
@@ -522,6 +522,8 @@ Rust（请先完成步骤一的环境变量导入并 source rc 文件或重启�
 <h3 id="步骤三设置-crates.io-镜像-修改配置-.cargoconfig">步骤三：设置
 <code>crates.io</code> 镜像， 修改配置 <code>~/.cargo/config</code></h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[source.crates-io]</span><br><span class="line">replace-with = <span class="string">'rsproxy-sparse'</span></span><br><span class="line">[source.rsproxy]</span><br><span class="line">registry = <span class="string">"https://rsproxy.cn/crates.io-index"</span></span><br><span class="line">[source.rsproxy-sparse]</span><br><span class="line">registry = <span class="string">"sparse+https://rsproxy.cn/index/"</span></span><br><span class="line">[registries.rsproxy]</span><br><span class="line">index = <span class="string">"https://rsproxy.cn/crates.io-index"</span></span><br><span class="line">[net]</span><br><span class="line">git-fetch-with-cli = <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h1 id="卸载无用的预装软件">8. 卸载无用的预装软件</h1>
+<p>首先是卸载LibreOffice <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dnf remove libreoffice*</span><br></pre></td></tr></table></figure></p>
 <h1 id="待未完续"><strong>待未完续</strong>（</h1>
 <h1 id="我想鸽了-不是"><del>我想鸽了</del> （不是）</h1>
 
@@ -618,7 +620,7 @@ Alt-Tab</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a c
 Rust安装及换源</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%B8%80%E8%AE%BE%E7%BD%AE-rustup-%E9%95%9C%E5%83%8F-%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE-.zshrc-or-.bashrc"><span class="nav-number">8.2.1.</span> <span class="nav-text">步骤一：设置
 Rustup 镜像， 修改配置 ~&#x2F;.zshrc or ~&#x2F;.bashrc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%BA%8C%E5%AE%89%E8%A3%85-rust%E8%AF%B7%E5%85%88%E5%AE%8C%E6%88%90%E6%AD%A5%E9%AA%A4%E4%B8%80%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%AF%BC%E5%85%A5%E5%B9%B6-source-rc-%E6%96%87%E4%BB%B6%E6%88%96%E9%87%8D%E5%90%AF%E7%BB%88%E7%AB%AF%E7%94%9F%E6%95%88"><span class="nav-number">8.2.2.</span> <span class="nav-text">步骤二：安装
 Rust（请先完成步骤一的环境变量导入并 source rc 文件或重启终端生效）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%B8%89%E8%AE%BE%E7%BD%AE-crates.io-%E9%95%9C%E5%83%8F-%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE-.cargoconfig"><span class="nav-number">8.2.3.</span> <span class="nav-text">步骤三：设置
-crates.io 镜像， 修改配置 ~&#x2F;.cargo&#x2F;config</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BE%85%E6%9C%AA%E5%AE%8C%E7%BB%AD"><span class="nav-number">9.</span> <span class="nav-text">待未完续（</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%88%91%E6%83%B3%E9%B8%BD%E4%BA%86-%E4%B8%8D%E6%98%AF"><span class="nav-number">10.</span> <span class="nav-text">我想鸽了 （不是）</span></a></li></ol></div>
+crates.io 镜像， 修改配置 ~&#x2F;.cargo&#x2F;config</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%B8%E8%BD%BD%E6%97%A0%E7%94%A8%E7%9A%84%E9%A2%84%E8%A3%85%E8%BD%AF%E4%BB%B6"><span class="nav-number">9.</span> <span class="nav-text">8. 卸载无用的预装软件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BE%85%E6%9C%AA%E5%AE%8C%E7%BB%AD"><span class="nav-number">10.</span> <span class="nav-text">待未完续（</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%88%91%E6%83%B3%E9%B8%BD%E4%BA%86-%E4%B8%8D%E6%98%AF"><span class="nav-number">11.</span> <span class="nav-text">我想鸽了 （不是）</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
