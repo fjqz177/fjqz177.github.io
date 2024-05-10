@@ -1248,7 +1248,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff596c;
+  background: #5b83ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2692,7 +2692,7 @@ body {
   background-position: 50% 50%;
 }
 body {
-  background: url("https://vip.helloimg.com/images/2023/12/26/oDBQb0.jpg");
+  background: url("https://pic.imgdb.cn/item/663de2c70ea9cb1403a765de.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
